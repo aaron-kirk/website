@@ -1,2 +1,2 @@
 # website
-Personal Website
+Personal Website in vanilla HTML and JS
