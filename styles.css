@@ -63,6 +63,10 @@ body {
     color: white;
 }
 
+.projects {
+    perspective: 8000px;
+}
+
 .card {
     width: 30vw;
     height: 30vw;
@@ -80,6 +84,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    transform-origin: -30vw;
+    animation: swivel 1.5s ease infinite alternate;
+}
+
+@keyframes swivel {
+    from {transform: rotate3D(0, 1, 0, -90deg);}
+    to {transform: rotate3D(0, 1, 0, 0deg);}
 }
 
 .card h1 {
