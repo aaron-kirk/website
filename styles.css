@@ -1,112 +1,173 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-.container {
-    background-image: linear-gradient(to left, #434343 0%, black 100%);
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+  
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    overflow-x: hidden;
+    transition: .3s ease;
+    background-color: #111111;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.name {
+    position: fixed;
+    top: 1vh;
+    left: 3vh;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 3vh;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.left-panel {
+    position: fixed;
+    top: 0;
+    left: 15vw;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: top .75s ease;
+}
+
+.info {
     height: 100vh;
-    display:flex;
-    overflow: hidden;
-}
+    width: 35vw;
 
-.card-selector {
-    padding-left: 100px;
-    align-self: center;
-    height: 600px;
-    width: 1100px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    color: white;
 }
 
-.image-border {
+.resume-box {
+    width: 35vw;
+    height: 45vw;
+
+    perspective: 1500px;
+
     display: flex;
-    align-self: center;
+    flex-direction: column;
     justify-content: center;
-    height: 330px;
-    width: 330px;
-    border-radius: 50%;
-    background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
-    transform: rotateZ(-10deg);
-    z-index: 1;
+    align-items: center;
 }
 
-.image {
-    width: 300px;
-    height: 300px;
+.resume-box img {
+    height: 70vh;
+
+    opacity: 1;
+
+    border-radius: 0.5%;
+    box-shadow: 0 10px 10px 5px rgba(0,0,0,0.4);
+}
+
+.contact h1 {
+    margin: 5vh 0;
+
+    font-size: 5vh;
+}
+
+.contact img {
+    height: 20vw;
+    width: 20vw;
+
     object-fit: cover;
     border-radius: 50%;
-    align-self: center;
-    transform: rotateZ(10deg);
-    z-index: 2;
 }
 
-.card {
-    position: relative;
-    left: -100px;
-    height: 225px;
-    width: 600px;
-    background-color: rgb(240, 240, 240);
-    align-self: center;
-    border-radius: 25px;
-    padding-left: 125px;
+.icons {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 20vw;
 }
 
-.card h1 {
-    margin-top: 50px;;
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 50px;
-}
+.icon-box {
+    height: 9vh;
+    width: 7vh;
+    margin: 3vh 0;
 
-.card p {
-    font-family: 'Space Mono', monospace;
-    font-size: 35px;
-}
-
-.content {
-    width:70vw;
     display: flex;
     justify-content: center;
+    align-items: flex-end;
 }
 
-.column {
-    background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
-    transform: rotateZ(-10deg) translateX(10vw) translateY(-10vh);
-    width: 50vw;
-    height: 120vh;
-    box-shadow: 0px 0px 20px 10px rgb(30,30,30);
+.icon-box img {
+    height: 7vh;
+    width: 7vh;
+
+    border-radius: 0;
+
+    transition: margin-bottom .5s ease;
+    margin-bottom: 0;
+}
+
+.icon-box:hover img {
+    margin-bottom: 2vh;
+}
+
+.navbar {
+    position: absolute;
+    right: 5%;
+    top: 5%;
 }
 
 .nav {
-    transform: rotateZ(10deg) translateY(20vh);
-}
-
-.nav-list {
-    height: 90vh;
-    list-style: none;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: space-around;
+    list-style: none;
 }
 
-.nav-list li a {
-    text-decoration: none;
-    color: rgb(230, 230, 230);
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 120px;
-    padding: 50px;
-    padding-right:0px;
-    display: block;
-    transition: all .15s ease;
+.nav li {
+    margin: -25px 0px;
+
+    perspective: 800px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 20vh;
+
+    transform: skew(0, -20deg);
 }
 
-.nav-list li {
-    transform: translateX(-225px);
+.nav li a {
+    display: inline-block;
+
+    transition: .3s ease;
+    transform-origin: right;
+    transform: rotate3d(0, 1, 0, -30deg);
+
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    color: transparent;
+
+    cursor: pointer;
 }
 
-li:hover a {
-    transform: scale(1.15, 1.15);
-    color:rgb(255, 255, 255);
+.nav li:hover a {
+    color: white !important;
+    -webkit-text-stroke-width: 0px;
+    transform: rotate3d(0, 1, 0, -10deg) skew(0, 5deg);
 }
