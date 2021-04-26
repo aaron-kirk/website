@@ -35,6 +35,8 @@ body {
     color: white;
 
     cursor: pointer;
+
+    transition: opacity .5s ease;
 }
 
 .left-panel {
@@ -58,8 +60,71 @@ body {
     align-items: center;
 
     font-family: 'Ubuntu', sans-serif;
-    font-weight: 300;
     color: white;
+}
+
+.card {
+    width: 30vw;
+    height: 30vw;
+
+    background: rgba(255,255,255,0.25);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 1vw;
+    border: 1px solid rgba(255,255,255,0.2);
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card h1 {
+    margin-bottom: 2vh;
+    font-size: 5vh;
+    text-shadow: 5px 7px 5px rgba(0,0,0,.3);
+}
+
+.card img {
+    height: 11vw;
+
+    border: 7px solid white;
+    border-radius: 10px;
+
+    box-shadow: 5px 7px 5px 1px rgba(0,0,0,0.3);
+}
+
+.card p {
+    margin-top: 2vh;
+    text-shadow: 5px 7px 5px rgba(0,0,0,.3);
+}
+
+.circle {
+    position: absolute;
+
+    border-radius: 50%;
+    background-color: rgb(49,145,231);
+    box-shadow: inset -25px -15px 40px rgba(0,0,0,0.3);
+    background-image: linear-gradient(-45deg, rgba(255,255,220,.3) 0%, transparent 100%);
+}
+
+#c1 {
+    top: 250vh;
+    left: 30vw;
+
+    width: 10vw;
+    height: 10vw;
+}
+
+#c2 {
+    top: 225vh;
+    left: 0vw;
+
+    width: 5vw;
+    height: 5vw;
 }
 
 .resume-box {
@@ -83,10 +148,38 @@ body {
     box-shadow: 0 10px 10px 5px rgba(0,0,0,0.4);
 }
 
+#download {
+    position: absolute;
+    left: 17.5vw;
+    top: 390vh;
+
+    transform: translateX(-50%);
+    transition: color .2s ease, opacity .2s ease;
+
+    font-size: 3vh;
+    font-weight: 100;
+}
+
+#download:hover {
+    color: rgb(26, 189, 75);
+}
+
+#download img {
+    height: 3vh;
+    width: 3vh;
+
+    transition: filter .2s cubic-bezier(0,1.06,.51,.85);
+}
+
+#download:hover img {
+    filter: brightness(0) saturate(100%) invert(50%) sepia(59%) saturate(643%) hue-rotate(85deg) brightness(103%) contrast(90%);
+}
+
 .contact h1 {
     margin: 5vh 0;
 
     font-size: 5vh;
+    font-weight: 100;
 }
 
 .contact img {

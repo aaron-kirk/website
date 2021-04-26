@@ -95,6 +95,7 @@ logo.addEventListener("click", (e) => {
 
 const resumeBox = document.querySelector(".resume-box");
 const resumeDoc = document.querySelector(".resume-box img");
+const download = document.querySelector("#download");
 
 var hasClicked = false;
 
@@ -130,6 +131,11 @@ resumeDoc.addEventListener("click", (e) => {
         resumeDoc.style.height = "70vh";
 
         logo.style.opacity = "100%";
+        download.style.transitionDelay = ".4s";
+        download.style.opacity = "100%";
+        setTimeout(() => {
+            download.style.transitionDelay = "0s";    
+        }, 400);
     } else {
         hasClicked = true;
 
@@ -137,7 +143,9 @@ resumeDoc.addEventListener("click", (e) => {
         resumeDoc.style.transform = `rotate3d(0, 0, 0, 0deg)`;
         resumeDoc.style.height = "90vh";
 
-        logo.style.transition = "opacity .5s ease";
         logo.style.opacity = "0";
+        download.style.transitionDelay = "0s";
+        download.style.opacity = "0";
+
     }
 });
