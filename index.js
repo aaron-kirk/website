@@ -97,6 +97,8 @@ const resumeBox = document.querySelector(".resume-box");
 const resumeDoc = document.querySelector(".resume-box img");
 const download = document.querySelector("#download");
 
+const nav = document.querySelector(".nav");
+
 var hasClicked = false;
 
 resumeBox.addEventListener("mousemove", (e) => {
@@ -127,6 +129,9 @@ resumeDoc.addEventListener("click", (e) => {
     if(hasClicked) {
         hasClicked = false;
 
+        body.style.overflowY = "scroll";
+        nav.style.pointerEvents = "all";
+
         resumeDoc.style.transform = `rotate3d(0, 0, 0, 0deg)`;
         resumeDoc.style.height = "70vh";
 
@@ -139,13 +144,22 @@ resumeDoc.addEventListener("click", (e) => {
     } else {
         hasClicked = true;
 
+        body.style.overflowY = "hidden";
+        nav.style.pointerEvents = "none";
+
         resumeDoc.style.transition = "height 1s ease, transform .2s ease";
         resumeDoc.style.transform = `rotate3d(0, 0, 0, 0deg)`;
-        resumeDoc.style.height = "90vh";
+        resumeDoc.style.height = "95vh";
 
         logo.style.opacity = "0";
         download.style.transitionDelay = "0s";
         download.style.opacity = "0";
 
     }
+});
+
+resumeBox.addEventListener("scroll", (e) => {
+    console.log("??");
+    if(!hasClicked) return;
+    console.log("SKREE SCROLLL");
 });
