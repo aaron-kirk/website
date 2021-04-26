@@ -48,5 +48,8 @@ for(i = 0; i < numCircles; i++) {
     circ.style.left = `${circles[i][0]}vw`;
     circ.style.top = `${circles[i][1]}vh`;
 
+    var delay = 2*Math.random();
+    circ.style.animation = `bob 1.5s ease-in-out ${delay}s infinite alternate`;
+
     document.body.appendChild(circ);
 }
