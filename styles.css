@@ -16,7 +16,7 @@ a {
 }
 
 body {
-    overflow-x: hidden;
+    overflow: hidden;
     transition: .3s ease;
     background-color: #111111;
 
@@ -81,10 +81,13 @@ body {
 
 .photo {
     position: absolute;
-    top: 121vh;
+    top: calc(138vh + 40px);
     left: 2vw;;
 
-    width: 15vw;
+    transform: translateY(-100%);
+
+    width: 250px;
+    max-width: 15vw;
     padding: 2%;
     border-radius: 10%;
 
@@ -102,27 +105,28 @@ body {
 
 .aboutme {
     position: absolute;
-    top: 140vh;
+    top: 135vh;
     left: 8vw;
 
-    height: 40vh;
-    width: 30vw;
+    min-width: calc(9vw + 4vh + 275px);
 }
 
 .aboutme h1 {
     position: relative;
     left: 9vw;
     margin: 1.5vh;
+    margin-bottom: 0;
+    margin-left: 10px;
 
     font-family: 'Poppins', sans-serif;
-    font-size: 5vh;
+    font-size: 40px;
     color: rgb(7, 102, 255);
 }
 
 .aboutme p {
-    font-size: 2.2vh;
+    font-size: 20px;
     font-weight: 100;
-    margin: 2vh;
+    margin: 20px;
 }
 
 .button {
@@ -168,11 +172,11 @@ body {
 
 .project {
     position: absolute;
-    top: 25vh;
-    left: 2.5vw;
-    transform: translateY(-50%);
-    width: 30vw;
-    height: 30vw;
+    top: 50%;
+    left: 15vw;
+    padding-top: 20px;
+    width: 500px;
+    max-width: 30vw;
 
     display: flex;
     flex-direction: column;
@@ -181,21 +185,16 @@ body {
 
     transform-origin: -30vw;
     transition: transform 1.5s ease;
-    /*animation: swivel 1.5s ease infinite alternate;*/
-}
-
-@keyframes swivel {
-    from {transform: rotate3D(0, 1, 0, -90deg);}
-    to {transform: rotate3D(0, 1, 0, 0deg);}
 }
 
 .project h1 {
     margin-bottom: 2vh;
-    font-size: 5vh;
+    font-size: 35px;
 }
 
 .project img {
-    height: 11vw;
+    width: 400px;
+    max-width: 25vw;
 
     border: 7px solid white;
     border-radius: 10px;
@@ -214,11 +213,11 @@ body {
 }
 
 #website {
-    transform: rotate3D(0, 1, 0, 0deg)
+    transform: translate(-50%, -50%) rotate3D(0, 1, 0, 0deg);
 }
 
 #uweast {
-    transform: rotate3D(0, 1, 0, -90deg)
+    transform: translate(-50%, -50%) rotate3D(0, 1, 0, -90deg);
 }
 
 .resume-box {
@@ -324,23 +323,26 @@ body {
 .navbar {
     position: absolute;
     right: 2%;
-    top: 5%;
+    height: 98vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
 .nav {
+    height: 98vh;
+
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: flex-end;
     list-style: none;
 }
 
 .nav li {
-    margin: -25px 0px;
-
     perspective: 800px;
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
-    font-size: 20vh;
+    font-size: 15vh;
 
     transform: skew(0, -20deg);
 }
@@ -397,7 +399,7 @@ body {
 
 .person {
     position: absolute;
-    top: 91vh;
+    top: calc(100vh - 75px);
     left: -14vw;
 
     height: 75px;

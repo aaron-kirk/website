@@ -21,15 +21,14 @@ button.addEventListener("click", (e) => {
     projs[nextProj].style.zIndex= "2";
     projs[currentProj].style.transition = "transform 1.5s ease";
     projs[nextProj].style.transition = "transform 1.5s ease";
-    projs[currentProj].style.transform = `rotate3D(0, 1, 0, 90deg)`;
-    projs[nextProj].style.transform = `rotate3D(0, 1, 0, 0deg)`;
+    projs[currentProj].style.transform = `translate(-50%, -50%) rotate3D(0, 1, 0, 90deg)`;
+    projs[nextProj].style.transform = `translate(-50%, -50%) rotate3D(0, 1, 0, 0deg)`;
     clicked = true;
 
     setTimeout(() => {
 
         projs[currentProj].style.transition = "transform 0s ease";
-        projs[currentProj].style.transform = "rotate3D(0,1,0,-90deg)";
-        //projs[currentProj].style.transition = "transform 1.5s ease";
+        projs[currentProj].style.transform = "translate(-50%, -50%) rotate3D(0,1,0,-90deg)";
         currentProj = nextProj;
         clicked = false;
     }, 1500);
