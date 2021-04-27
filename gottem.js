@@ -10,18 +10,17 @@ me.addEventListener("click", (e) => {
     me.style.transform = "rotateY(90deg)";
 
     setTimeout(() => {
-        gottem.style.transform = "rotateY(180deg)";
+        gottem.style.transform = "rotateY(0deg)";
     }, 300);
 });
 
 gottem.addEventListener("click", (e) => {
-    console.log("yeet");
     if(!toggledContact) return;
     toggledContact = false;
 
     gottem.style.transform = "rotateY(90deg)";
 
     setTimeout(() => {
-        me.style.transform = "rotateY(180deg)";
+        me.style.transform = "rotateY(0deg)";
     }, 300);
 })
