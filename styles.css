@@ -396,9 +396,9 @@ body {
 }
 
 .person {
-    position: fixed;
-    bottom: 1%;
-    left: 1%;
+    position: absolute;
+    top: 91vh;
+    left: -14vw;
 
     height: 75px;
 }
