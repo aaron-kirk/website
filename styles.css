@@ -40,6 +40,10 @@ body {
     text-shadow: 5px 7px 5px rgba(0,0,0,.3);
 }
 
+.name {
+    transition: opacity .5s ease;
+}
+
 .name h1 {
     position: fixed;
     top: 1vh;
@@ -52,8 +56,6 @@ body {
     color: white;
 
     cursor: pointer;
-
-    transition: opacity .5s ease;
 }
 
 #kirk {
@@ -408,4 +410,8 @@ body {
     left: -14vw;
 
     height: 75px;
+}
+
+.mobile-navbar {
+    display: none;
 }
