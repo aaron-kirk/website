@@ -6,7 +6,7 @@ function wToH(width) {
     return height;
 }
 
-const numCircles = Math.ceil(4*Math.random()+1);
+const numCircles = Math.ceil(4*Math.random()+3);
 let circles = [];
 let circleRefs = [];
 
@@ -16,7 +16,7 @@ for(i = 0; i < numCircles; i++) {
     loop1: while(true) {
         var passed = true;
 
-        circles[i] = [Math.ceil(70*Math.random()+15), Math.ceil(70*Math.random()+15), Math.ceil(8*Math.pow(Math.random(),2)) + 3];
+        circles[i] = [Math.ceil(70*Math.random()+15), Math.ceil(70*Math.random()+15), Math.ceil(8*Math.pow(Math.random(),3)) + 3];
 
         // Check other circle for intersection; regenerate if failed
         loop2: for(j = 0; j < i; j++) {

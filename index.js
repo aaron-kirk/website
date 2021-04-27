@@ -6,17 +6,25 @@ const resume = document.querySelector("#resume");
 const contact = document.querySelector("#contact");
 
 const liA = document.getElementsByClassName("nav-link");
+const circs = document.getElementsByClassName("circle");
 
 about.addEventListener("mouseenter", (e) => {
     body.style.backgroundColor = "#216869";
     for (link of liA) {
         link.style.color = "rgba(255, 255, 255, 0.1)";
     }
+    for(circ of circs) {
+        circ.style.backgroundColor = "#969696";
+    }
+    
 });
 about.addEventListener("mouseleave", (e) => {
     body.style.backgroundColor = "#111111";
     for (let link of liA) {
         link.style.color = "transparent";
+    }
+    for(circ of circs) {
+        circ.style.backgroundColor = "rgb(49,145,231)";
     }
 });
 
@@ -25,11 +33,17 @@ projects.addEventListener("mouseenter", (e) => {
     for (let link of liA) {
         link.style.color = "rgba(255, 255, 255, 0.1)";
     }
+    for(circ of circs) {
+        circ.style.backgroundColor = "#969696";
+    }
 });
 projects.addEventListener("mouseleave", (e) => {
     body.style.backgroundColor = "#111111";
     for (let link of liA) {
         link.style.color = "transparent";
+    }
+    for(circ of circs) {
+        circ.style.backgroundColor = "rgb(49,145,231)";
     }
 });
 
@@ -38,11 +52,17 @@ resume.addEventListener("mouseenter", (e) => {
     for (let link of liA) {
         link.style.color = "rgba(255, 255, 255, 0.1)";
     }
+    for(circ of circs) {
+        circ.style.backgroundColor = "#969696";
+    }
 });
 resume.addEventListener("mouseleave", (e) => {
     body.style.backgroundColor = "#111111";
     for (let link of liA) {
         link.style.color = "transparent";
+    }
+    for(circ of circs) {
+        circ.style.backgroundColor = "rgb(49,145,231)";
     }
 });
 
@@ -51,11 +71,17 @@ contact.addEventListener("mouseenter", (e) => {
     for (let link of liA) {
         link.style.color = "rgba(255, 255, 255, 0.1)";
     }
+    for(circ of circs) {
+        circ.style.backgroundColor = "#969696";
+    }
 });
 contact.addEventListener("mouseleave", (e) => {
     body.style.backgroundColor = "#111111";
     for (let link of liA) {
         link.style.color = "transparent";
+    }
+    for(circ of circs) {
+        circ.style.backgroundColor = "rgb(49,145,231)";
     }
 });
 
