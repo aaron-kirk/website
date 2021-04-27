@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const body = document.querySelector('body');
 
 const about = document.querySelector("#about");
@@ -190,5 +189,3 @@ resumeBox.addEventListener("scroll", (e) => {
     if(!hasClicked) return;
     console.log("SKREE SCROLLL");
 });
-=======
->>>>>>> parent of 0f51e13 (Second attempt)
