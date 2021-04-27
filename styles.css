@@ -404,7 +404,7 @@ body {
 
 .person {
     position: absolute;
-    top: calc(100vh - 75px);
+    top: calc(100vh - 80px);
     left: -14vw;
 
     height: 75px;
