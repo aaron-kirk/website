@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="mobile-styles.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 
     <title>Aaron Kirk</title>
 </head>
@@ -16,98 +16,73 @@
     <div class="name">
         <h1>Aaron<br><span id="kirk">Kirk</span></h1>
     </div>
-    <div class="left-panel">
-        <div class="info">
 
-        </div>
-        <div class="info about">
-            <div class="photo glass">
-                <img src="assets/sexy.jpg">
-            </div>
-            <div class="aboutme glass">
-                <h1>'Sup Bitch ??!</h1>
+    <div class="circ-box" id="b0">
+        <div class="circle" id="c0">
+            <div class="info-panel glass">
+                <h1>About-land</h1>
                 <p>
-                    My name's Aaron. I'm currently a first-year at University of California, San Diego pursuing a double major in Computational Physics and joint Math-Computer Science. <br><br> Don't get me wrong—despite the fancy degree, I'm not a braniac or anything. In fact, my friends would characterize me as pretty stupid. Anyhow, beyond being a student, I'm a developer, IT Technician, and a mentor for a robotics team.
+                    <!--Learn a little bit about who I am, what I do, and how I like to do it.-->
+                    A middle-aged world of about 19 cosmic-years. Though parts of this planet are seemingly fun and welcoming, much of its land is rough and barren.
+                    <br><br><br>
+                    Population: 1 Person
                 </p>
             </div>
+            <div class="selector"></div>
+            <div class="label" id="l0">About-land</div>
         </div>
-        <div class="info projects">
-            <div class="button glass">
-                <img src="assets/right-arrow.png">
-            </div>
-            <div class="project glass" id="website">
-                <h1>This Website</h1>
-                <img src="assets/website.png">
-                <p>The page you are currently viewing, a.k.a my personal website. A project I worked on for fun the weekend of April 25th, 2021 to avoid having to read severals hours of text I had been avoiding all weekend.<br><br>Built in raw HTML, CSS, and JS. Just the way I like it.</p>
-            </div>
-            <div class="project glass" id="uweast">
-                <h1>UWEAST</h1>
-                <img src="assets/uweast.png">
-                <p>As a member of UCSD's Triton Software Engineering, I took part in creating a catering e-commerce webpage for a local non-profit organization, United Women of East Africa Support Team (UWEAST). My work mostly comprised front-end development in React.</p>
-            </div>
-        </div>
-        <div class="info resume">
-            <div class="resume-box">
-                <img src="assets/Resume.png">
-            </div>
-            <h3 id="download"><a href="assets/Resume.pdf" download>Download <img src="assets/download.png"></a></h3>
-        </div>
-        <div class="info contact">
-            <h1>Wanna get in touch?</h1>
-            <img src="assets/headshot.jpg" id="me">
-            <img src="assets/gottem.jpg" id="gottem">
-            <div class="icons">
-                <div class="icon-box">
-                    <a href="mailto:ajkirk1115@gmail.com" target="_blank"></a>
-                    <img src = "assets/email.png">    
-                </div>
-                <div class="icon-box">
-                    <a href="https://t.me/littlebro5" target="_blank"></a>
-                    <img src = "assets/telegram.png">
-                </div>
-                <div class="icon-box">
-                    <a href="https://github.com/aaron-kirk/" target="_blank"></a>
-                    <img src = "assets/github.png">
-                </div>
-            </div>
-        </div>
-        <img class="person" src="assets/person.png">
     </div>
-    <div class="mobile-navbar">
-        <ul class="mobile-nav">
-            <li id="mobile-about">
-                <a class="nav-link">About</a>
-            </li>
-            <li id="mobile-projects">
-                <a class="nav-link">Projects</a>
-            </li>
-            <li id="mobile-resume">
-                <a class="nav-link">Resume</a>
-            </li>
-            <li id="mobile-contact">
-                <a class="nav-link">Contact</a>
-            </li>
-        </ul>
+
+    <div class="circ-box" id="b1">
+        <div class="circle" id="c1">
+            <div class="info-panel glass">
+                <h1>The Projects System</h1>
+                <p>
+                    <!--Here are some of the things I've been spending my time on. Most of my work has been web-development based.-->
+                    A new and flourishing system, with a diverse range of flora and fauna. Life in this system is mostly <span class="highlight">web-development</span> based.
+                    <br><br><br><br>
+                    Population: 2 Projects
+                </p>
+            </div>
+            <div class="selector"></div>
+            <div class="label" id="l1">The Projects System</div>
+        </div>
+        <div class="circle" id="p1"></div>
+        <div class="circle" id="p2"></div>
     </div>
-    <div class="navbar">
-        <ul class="nav">
-            <li id="about">
-                <a class="nav-link" id="about-link">About</a>
-            </li>
-            <li id="projects">
-                <a class="nav-link">Projects</a>
-            </li>
-            <li id="resume">
-                <a class="nav-link">Resume</a>
-            </li>
-            <li id="contact">
-                <a class="nav-link">Contact</a>
-            </li>
-        </ul>
-    </div> 
-   <script src="circles.js"></script>
+
+    <div class="circ-box" id="b2">
+        <div class="circle" id="c2">
+            <div class="info-panel glass">
+                <h1>Resume-world</h1>
+                <p>
+                    Take a gander at my "professional" side. There's not much there. If you're looking at this, you're probably just stalking me. But, for business inquiries, you can reach out to me at <span class="highlight">akirk@ucsd.edu</span>
+                    <br><br>
+                    Population: 1 Resume
+                </p>
+            </div>
+            <div class="selector"></div>
+            <div class="label" id="l2">Resume-world</div>
+        </div>
+    </div>
+    
+    <div class="circ-box" id="b3">
+        <div class="circle" id="c3">
+            <div class="info-panel glass">
+                <h1>Contact-planet</h1>
+                <p>
+                    Stalk me on all my social platforms! Or, reach out to me if you're not a weirdo and have a question or just want to say "Hi".
+                    <br><br><br><br>
+                    Population: 3 Platforms
+                </p>
+            </div>
+            <div class="selector"></div>
+            <div class="label" id="l3">Contact-planet</div>
+        </div>
+    </div>
+
+    <div class="stars"></div>
+    <div class="twinkling"></div>
 </body>
-<script src="index.js"></script>
-<script src="projects.js"></script>
-<script src="gottem.js"></script>
+<script src="circles.js"></script>
 </html>
