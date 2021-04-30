@@ -194,16 +194,19 @@ body {
     box-shadow: 0 8px 32px 0 rgba(129, 129, 124, 0.4);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border-radius: 1vw;
+    border-radius: 20px;
     border: 1px solid rgba(255,255,255,0.2);
 
     z-index: 3;
 }
 
-.glass p, .glass h1 {
+.glass * {
     text-shadow: 5px 7px 5px rgba(0,0,0,.3);
 }
 
+.glass :is(h1, h2, h3) {
+    text-shadow: 5px 7px 10px rgba(0,0,0,.3);
+}
 
 @keyframes bob {
     from {top: 0%;}
@@ -221,7 +224,7 @@ body {
 }
 
 .stars, .twinkling {
-    position:absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -242,4 +245,13 @@ body {
     z-index:-2;
   
     animation: move-twink-back 200s linear infinite;
+}
+
+.close {
+    position: fixed;
+    top: 3vh;
+    right: 3vh;
+    width: 75px;
+
+    cursor: pointer;
 }
